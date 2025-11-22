@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk – Classic Timepiece</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const animated = document.querySelectorAll(".fade-in, .slide-up, .fade-right");
+            const show = () => {
+                animated.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 100) el.classList.add("show");
+                });
+            };
+            window.addEventListener("scroll", show);
+            show();
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="navbar">
+        <h1 class="logo-text">Classic Timepiece</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="produk.html">Produk</a>
+            <a href="about-us.html">About Us</a>
+        </nav>
+    </header>
+
+    <!-- PRODUCT DETAIL -->
+    <section class="product-detail fade-in" style="flex-direction: column; text-align: center;">
+
+        <!-- IMAGE ON TOP -->
+        <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 30px;">
+            <img src="assets/watch2.jpg" class="detail-img" style="width: 380px; border-radius: 15px;"
+                alt="Garmin Vivoactive 5 Gold Aluminium Bezel Ivory">
+        </div>
+
+        <!-- TEXT + SPECIFICATIONS -->
+        <div style="max-width: 900px; margin: auto; text-align: left;">
+
+            <h2 style="color: #F5D17A; font-size: 32px; margin-bottom: 10px;">
+                Garmin Vivoactive 5 Smartwatch Gold Aluminium Bezel Ivory Silicone Band
+            </h2>
+
+            <p class="detail-price" style="font-size: 26px; margin-bottom: 15px;">
+                Rp 5.349.000
+            </p>
+
+            <p class="detail-desc" style="margin-bottom: 25px; color: #CCC; line-height: 1.7;">
+                Garmin Vivoactive 5 varian Gold Alumunium Bezel dan Ivory Silicone Band menghadirkan kombinasi gaya
+                mewah dan teknologi kesehatan mutakhir.
+                Dilengkapi layar AMOLED 1,2″, lebih dari 30 mode olahraga, pemantauan Body Battery™, Sleep Coach, serta
+                masa pakai baterai hingga 11 hari. Ideal untuk gaya hidup aktif sekaligus stylish.
+            </p>
+
+            <h3 style="color: #F5D17A; font-size: 26px; margin-bottom: 15px;">Spesifikasi</h3>
+
+            <table class="spec-table">
+                <tbody>
+                    <tr>
+                        <th>Model</th>
+                        <td>010-02862-51 / 010-02862-11</td>
+                    </tr>
+                    <tr>
+                        <th>Case Size</th>
+                        <td>42.2 × 42.2 × 11.1 mm</td>
+                    </tr>
+                    <tr>
+                        <th>Weight</th>
+                        <td>23-26 g (±36 g dengan tali)</td>
+                    </tr>
+                    <tr>
+                        <th>Display</th>
+                        <td>1.2″ AMOLED (390×390 pixels)</td>
+                    </tr>
+                    <tr>
+                        <th>Lens / Glass</th>
+                        <td>Corning® Gorilla® Glass 3</td>
+                    </tr>
+                    <tr>
+                        <th>Case & Bezel Material</th>
+                        <td>Reinforced Polymer / Aluminium Bezel</td>
+                    </tr>
+                    <tr>
+                        <th>Band Material</th>
+                        <td>Silicone Band – 20 mm Quick Release</td>
+                    </tr>
+                    <tr>
+                        <th>Water Rating</th>
+                        <td>5 ATM / 50 m</td>
+                    </tr>
+                    <tr>
+                        <th>Battery Life</th>
+                        <td>
+                            Smartwatch Mode: Up to 11 days <br>
+                            Battery Saver Mode: Up to 21 days <br>
+                            All-Systems GNSS: Up to 17 h (with music: up to 8 h)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Sensors</th>
+                        <td>GPS, GLONASS, Galileo, Wrist HR, Pulse Ox, Altimeter, Compass, Accelerometer, Thermometer,
+                            Ambient Light</td>
+                    </tr>
+                    <tr>
+                        <th>Health Features</th>
+                        <td>Body Battery™, Sleep Score & Coaching, Stress Tracking, Women’s Health, Hydration &
+                            Respiration Tracking</td>
+                    </tr>
+                    <tr>
+                        <th>Sports Modes</th>
+                        <td>30+ Preloaded Sports Apps including Wheelchair Mode
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Connectivity</th>
+                        <td>Bluetooth®, ANT+, Wi-Fi, Smart Notifications, Connect IQ Store</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a href="https://api.whatsapp.com/send?phone=6287775999393&text=Hallo%20kak%2C%20saya%20ingin%20membeli%20Garmin%20Vivoactive%205%20Gold"
+                class="btn" style="margin-top: 30px;">
+                Beli Sekarang
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <h2>Classic Timepiece</h2>
+            <p>Premium Watches for a New Generation.</p>
+            <p>By Bfreezzz</p>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Classic Timepiece. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

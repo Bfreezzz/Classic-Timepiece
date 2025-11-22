@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classic Timepiece - Premium Watches</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const animated = document.querySelectorAll(".fade-in, .slide-up, .fade-right");
+
+            const show = () => {
+                animated.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 100) el.classList.add("show");
+                });
+            };
+            window.addEventListener("scroll", show);
+            show();
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <h1 class="logo-text">Classic Timepiece</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="produk.html" class="active">Produk</a>
+            <a href="about-us.html">About Us</a>
+        </nav>
+    </header>
+
+    <!-- PRODUCT LIST -->
+    <section class="product-list-section">
+        <h2 class="promo-title">Koleksi Jam Tangan</h2>
+
+        <div class="product-grid">
+
+            <!-- 1 -->
+            <div class="product-card">
+                <span class="promo-badge">DISKON 25%</span>
+                <img src="assets/watch1.jpg" class="product-img">
+                <h3>Garmin Vivoactive 5 Smartwatch Slate Alumunium Bezel</h3>
+
+                <span class="old-price">Rp 7.132.000</span>
+                <p class="price">Rp 5.349.000</p>
+
+                <a href="product-detail1.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 2 -->
+            <div class="product-card">
+                <span class="promo-badge">DISKON 25%</span>
+                <img src="assets/watch2.jpg" class="product-img">
+                <h3>Garmin Vivoactive 5 Gold Alumunium Bezel Ivory Band</h3>
+
+                <span class="old-price">Rp 7.132.000</span>
+                <p class="price">Rp 5.349.000</p>
+
+                <a href="product-detail2.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 3 -->
+            <div class="product-card">
+                <img src="assets/watch3.jpg" class="product-img">
+                <h3>Eiger Alverstone Watch</h3>
+
+                <p class="price">Rp 2.745.000</p>
+
+                <a href="product-detail3.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 4 -->
+            <div class="product-card">
+                <span class="promo-badge cashback">CASHBACK 500K</span>
+                <img src="assets/watch4.jpg" class="product-img">
+                <h3>Casio G-Shock X Rui Hachimura Limited</h3>
+
+                <p class="price">Rp 6.339.000</p>
+
+                <a href="product-detail4.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 5 -->
+            <div class="product-card">
+                <span class="promo-badge">DISKON 10%</span>
+                <img src="assets/watch5.jpg" class="product-img">
+                <h3>Casio G-Shock Energy Pack Vivid Yellow</h3>
+
+                <span class="old-price">Rp 1.989.000</span>
+                <p class="price">Rp 1.789.000</p>
+
+                <a href="product-detail5.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 6 -->
+            <div class="product-card">
+                <img src="assets/watch6.jpg" class="product-img">
+                <h3>Garmin Instinct 3 Smartwatch Solar</h3>
+
+                <p class="price">Rp 9.100.000</p>
+
+                <a href="product-detail6.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 7 -->
+            <div class="product-card">
+                <span class="promo-badge cashback">CASHBACK 700K</span>
+                <img src="assets/watch7.jpg" class="product-img">
+                <h3>Casio G-Shock Hyper Red Limited Edition</h3>
+
+                <p class="price">Rp 3.369.000</p>
+
+                <a href="product-detail7.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 8 -->
+            <div class="product-card">
+                <img src="assets/watch8.jpg" class="product-img">
+                <h3>Casio G-Shock Men Digital Blue Resin</h3>
+
+                <p class="price">Rp 1.129.000</p>
+
+                <a href="product-detail8.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 9 -->
+            <div class="product-card">
+                <span class="promo-badge">DISKON 20%</span>
+                <img src="assets/watch9.jpg" class="product-img">
+                <h3>Seiko 5 Sports SKX Style Automatic</h3>
+
+                <span class="old-price">Rp 4.775.000</span>
+                <p class="price">Rp 3.820.000</p>
+
+                <a href="product-detail9.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 10 -->
+            <div class="product-card">
+                <img src="assets/watch10.jpg" class="product-img">
+                <h3>Orient Bambino 38 Classic Automatic Black</h3>
+
+                <p class="price">Rp 4.220.000</p>
+
+                <a href="product-detail10.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 11 -->
+            <div class="product-card">
+                <img src="assets/watch11.jpg" class="product-img">
+                <h3>MIDO Ocean Star Captain Chronograph Black</h3>
+
+                <p class="price">Rp 57.600.000</p>
+
+                <a href="product-detail11.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 12 -->
+            <div class="product-card">
+                <span class="promo-badge cashback">CASHBACK 1.100K</span>
+                <img src="assets/watch12.jpg" class="product-img">
+                <h3>MIDO Ocean Star Chronograph Navy Blue</h3>
+
+                <p class="price">Rp 15.360.000</p>
+
+                <a href="product-detail12.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 13 -->
+            <div class="product-card">
+                <img src="assets/watch13.jpg" class="product-img">
+                <h3>Seiko 5 Sports Indonesian Exclusive Limited 1000pcs</h3>
+
+                <p class="price">Rp 7.311.000</p>
+
+                <a href="product-detail13.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 14 -->
+            <div class="product-card">
+                <span class="promo-badge">DISKON 15%</span>
+                <img src="assets/watch14.jpg" class="product-img">
+                <h3>Casio Edifice Forged Carbon Black JDM</h3>
+
+                <span class="old-price">Rp 11.646.000</span>
+                <p class="price">Rp 9.899.000</p>
+
+                <a href="product-detail14.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 15 -->
+            <div class="product-card">
+                <img src="assets/watch15.jpg" class="product-img">
+                <h3>Fossil Machine Men Black Stainless Steel</h3>
+
+                <p class="price">Rp 3.945.000</p>
+
+                <a href="product-detail15.html" class="btn">Detail</a>
+            </div>
+
+
+            <!-- 16 -->
+            <div class="product-card">
+                <span class="promo-badge cashback">CASHBACK 500K</span>
+                <img src="assets/watch16.jpg" class="product-img">
+                <h3>Citizen L Ladies Pink Dial Rose Gold Strap</h3>
+
+                <p class="price">Rp 5.771.000</p>
+
+                <a href="product-detail16.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 17 -->
+            <div class="product-card">
+                <img src="assets/watch17.jpg" class="product-img">
+                <h3>Fossil Minimalist Men Black Stainless Steel</h3>
+
+                <p class="price">Rp 2.350.000</p>
+
+                <a href="product-detail17.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 18 -->
+            <div class="product-card">
+                <img src="assets/watch18.jpg" class="product-img">
+                <h3>Casio 10 Year Battery 100M Green Resin</h3>
+
+                <p class="price">Rp 489.000</p>
+
+                <a href="product-detail18.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 19 -->
+            <div class="product-card">
+                <span class="promo-badge">DISKON 5%</span>
+                <img src="assets/watch19.jpg" class="product-img">
+                <h3>Casio Illuminator Digital Grey Resin</h3>
+
+                <span class="old-price">Rp 787.000</span>
+                <p class="price">Rp 749.000</p>
+
+                <a href="product-detail19.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 20 -->
+            <div class="product-card">
+                <img src="assets/watch20.jpg" class="product-img">
+                <h3>Fossil Neutra Automatic Skeleton Black Mesh</h3>
+
+                <p class="price">Rp 4.935.000</p>
+
+                <a href="product-detail20.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 21 -->
+            <div class="product-card">
+                <img src="assets/watch21.jpg" class="product-img">
+                <h3>Citizen Chronograph Rescue Collection Green Dial</h3>
+
+                <p class="price">Rp 4.669.000</p>
+
+                <a href="product-detail21.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 22 -->
+            <div class="product-card">
+                <span class="promo-badge cashback">CASHBACK 800K</span>
+                <img src="assets/watch22.jpg" class="product-img">
+                <h3>Garmin Lily 2 Digital Metallic Lilac Silicone</h3>
+
+                <p class="price">Rp 4.399.000</p>
+
+                <a href="product-detail22.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 23 -->
+            <div class="product-card">
+                <img src="assets/watch23.jpg" class="product-img">
+                <h3>Casio General Digital White Resin Strap</h3>
+
+                <p class="price">Rp 489.000</p>
+
+                <a href="product-detail23.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 24 -->
+            <div class="product-card">
+                <img src="assets/watch24.jpg" class="product-img">
+                <h3>Orient M-Force Automatic Red Dial Stainless Steel</h3>
+
+                <p class="price">Rp 10.000.000</p>
+
+                <a href="product-detail24.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 25 -->
+            <div class="product-card">
+                <span class="promo-badge">DISKON 12%</span>
+                <img src="assets/watch25.jpg" class="product-img">
+                <h3>Garmin Vivoactive 6 Jasper Green Aluminium</h3>
+
+                <span class="old-price">Rp 7.965.000</span>
+                <p class="price">Rp 7.010.000</p>
+
+                <a href="product-detail25.html" class="btn">Detail</a>
+            </div>
+
+
+            <!-- 26 -->
+            <div class="product-card">
+                <img src="assets/watch26.jpg" class="product-img">
+                <h3>Casio Baby-G Brilliantly Color Blue Digital Analog</h3>
+
+                <p class="price">Rp 2.599.000</p>
+
+                <a href="product-detail26.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 27 -->
+            <div class="product-card">
+                <span class="promo-badge cashback">CASHBACK 1.800K</span>
+                <img src="assets/watch27.jpg" class="product-img">
+                <h3>Tsar Bomba Carbon Bezel Atomic Watch Set</h3>
+
+                <p class="price">Rp 14.215.000</p>
+
+                <a href="product-detail27.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 28 -->
+            <div class="product-card">
+                <img src="assets/watch28.jpg" class="product-img">
+                <h3>Casio G-Shock X Bearbrick Shanghai Night Series</h3>
+
+                <p class="price">Rp 5.988.000</p>
+
+                <a href="product-detail28.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 29 -->
+            <div class="product-card">
+                <img src="assets/watch29.jpg" class="product-img">
+                <h3>Casio Baby-G Cherry On Top Pink Resin JDM</h3>
+
+                <p class="price">Rp 1.779.000</p>
+
+                <a href="product-detail29.html" class="btn">Detail</a>
+            </div>
+
+            <!-- 30 -->
+            <div class="product-card">
+                <span class="promo-badge">DISKON 18%</span>
+                <img src="assets/watch30.jpg" class="product-img">
+                <h3>Garmin Forerunner Smartwatch Black Strap</h3>
+
+                <span class="old-price">Rp 3.902.000</span>
+                <p class="price">Rp 3.199.000</p>
+
+                <a href="product-detail30.html" class="btn">Detail</a>
+            </div>
+
+        </div> <!-- END PRODUCT GRID -->
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <h2>Classic Timepiece</h2>
+            <p>Premium Watches for a New Generation.</p>
+            <p>By Bfreezzz</p>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Classic Timepiece. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

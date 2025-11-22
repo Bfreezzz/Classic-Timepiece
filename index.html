@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classic Timepiece - Premium Watches</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- SCROLL ANIMATION -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const animated = document.querySelectorAll(".fade-in, .slide-up, .fade-right");
+
+            const show = () => {
+                animated.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 100) el.classList.add("show");
+                });
+            };
+
+            window.addEventListener("scroll", show);
+            show();
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="navbar">
+        <h1 class="logo-text">Classic Timepiece</h1>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="produk.html">Produk</a>
+            <a href="about-us.html">About Us</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero fade-in">
+        <div class="hero-text">
+            <h2>Welcome to Classic Timepiece</h2>
+            <p>Temukan koleksi jam tangan premium yang dirancang untuk gaya modern, elegan, dan berkarakter.
+                Dibuat untuk generasi baru yang ingin tampil percaya diri setiap saat.</p>
+            <a href="produk.html" class="btn">Explore Collection</a>
+        </div>
+
+        <img src="assets/hero.jpg" alt="Hero Image" class="hero-image fade-right">
+    </section>
+
+    <!-- INFO SECTION -->
+    <section class="info slide-up">
+        <h2>Kenapa Harus Beli Jam Tangan di Classic Timepiece?</h2>
+        <p>
+            Classic Timepiece hadir sebagai destinasi terbaik bagi kamu yang mencari jam tangan berkualitas tinggi
+            dengan desain elegan dan sentuhan modern. Setiap produk yang kami sediakan telah melalui proses
+            kurasi ketat untuk memastikan keaslian, ketahanan, serta kenyamanan maksimal saat digunakan.
+            Koleksi kami mencakup berbagai model mulai dari gaya kasual, sport, hingga premium luxury yang cocok
+            untuk semua kalangan—baik pelajar, pekerja profesional, maupun penggemar fashion.
+            <br><br>
+            Dengan mengutamakan kebutuhan generasi modern, terutama Gen-Z yang menyukai gaya unik dan penuh karakter,
+            Classic Timepiece memberikan pengalaman berbelanja yang cepat, aman, dan terpercaya. Mulai dari desain
+            yang memancarkan kepercayaan diri hingga fitur-fitur canggih yang menunjang aktivitas harian,
+            setiap jam tangan dirancang untuk mendukung aktivitasmu dan meningkatkan gaya personalmu.
+        </p>
+    </section>
+
+
+    <!-- BENEFIT SECTION -->
+    <section class="benefit-2-section fade-in">
+        <h2 class="benefit-2-title">Keunggulan Belanja di Classic Timepiece</h2>
+
+        <div class="benefit-2-container">
+
+            <div class="benefit-2-card">
+                <img src="assets/benefit1.png" class="benefit-2-icon">
+                <h3>100% Original</h3>
+                <p>Semua produk dijamin keaslian dan kualitasnya.</p>
+            </div>
+
+            <div class="benefit-2-card">
+                <img src="assets/benefit2.png" class="benefit-2-icon">
+                <h3>Garansi Resmi</h3>
+                <p>Setiap pembelian mendapatkan garansi resmi dari brand.</p>
+            </div>
+
+            <div class="benefit-2-card">
+                <img src="assets/benefit3.png" class="benefit-2-icon">
+                <h3>Premium Packaging</h3>
+                <p>Kotak eksklusif dan elegan, cocok untuk hadiah.</p>
+            </div>
+
+            <div class="benefit-2-card">
+                <img src="assets/benefit4.png" class="benefit-2-icon">
+                <h3>Fast Delivery</h3>
+                <p>Kirim cepat ke seluruh Indonesia, aman & bergaransi.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SPECIAL PROMO -->
+    <section class="promo-section fade-in">
+        <h2 class="promo-title">Special Promo Bulan Ini</h2>
+        <p class="promo-subtitle">Dapatkan diskon eksklusif untuk koleksi tertentu dan edisi terbatas!</p>
+
+        <div class="promo-container">
+
+            <!-- Promo Card 1 -->
+            <div class="promo-card">
+                <div class="promo-glass">
+                    <img src="assets/promo1.jpg" class="promo-img">
+                    <h3>Garmin Vivoactive 5</h3>
+                    <p>Diskon hingga 25% khusus bulan ini.</p>
+                    <a href="promo.html" class="promo-btn">Lihat Promo</a>
+                </div>
+            </div>
+
+            <!-- Promo Card 2 -->
+            <div class="promo-card">
+                <div class="promo-glass">
+                    <img src="assets/promo2.jpg" class="promo-img">
+                    <h3>Casio G-Shock X Rui Hachimura</h3>
+                    <p>Dapatkan cashback Rp500.000.</p>
+                    <a href="product-detail4.html" class="promo-btn">Lihat Promo</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <h2>Classic Timepiece</h2>
+            <p>Premium Watches for a New Generation.</p>
+            <p>By Bfreezzz</p>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Classic Timepiece. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 60) {
+                navbar.classList.add("shrink");
+            } else {
+                navbar.classList.remove("shrink");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

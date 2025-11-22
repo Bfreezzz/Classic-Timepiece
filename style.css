@@ -1,0 +1,834 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0D0D0D;
+    color: #EEE;
+}
+
+.logo-text {
+    font-size: 26px;
+    font-weight: 700;
+    color: #F5D17A;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+/* NAVBAR BASE */
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #EEE;
+    font-weight: 600;
+    position: relative;
+    opacity: 0;
+    /* For fade animation */
+    animation: fadeMenu 0.8s forwards;
+}
+
+/* FADE-IN MENU ANIMATION */
+@keyframes fadeMenu {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* DELAY EACH MENU ITEM */
+nav a:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+nav a:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+nav a:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* HOVER UNDERLINE GOLD */
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    left: 0;
+    bottom: -5px;
+    background: #F5D17A;
+    transition: 0.3s ease;
+    border-radius: 3px;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ACTIVE MENU */
+nav a.active {
+    color: #F5D17A;
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
+
+nav a:hover {
+    color: #F5D17A;
+}
+
+/* NAVBAR DEFAULT (TRANSPARENT + TALL) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 50px;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: 0.35s ease-in-out;
+}
+
+/* SHRINK */
+.navbar.shrink {
+    padding: 10px 50px;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* LOGO SHRINK */
+.navbar.shrink .logo-text {
+    font-size: 20px;
+}
+
+/* NAVBAR LINK SHRINK (sedikit lebih dekat) */
+.navbar.shrink nav a {
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 50px;
+    /* Dikecilkan dari 120px */
+    background: linear-gradient(135deg, #111, #1A1A1A);
+    overflow: hidden;
+    min-height: 380px;
+    /* NEW: kontrol tinggi hero */
+}
+
+.hero-text {
+    max-width: 450px;
+}
+
+.hero-text h2 {
+    font-size: 48px;
+    color: #F5D17A;
+}
+
+.hero-text p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #DDD;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #F5D17A;
+    color: #000;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(255, 215, 0, 0.35);
+}
+
+/* HERO IMAGE (UPDATED FOR NEW WIDE IMAGE) */
+.hero-image {
+    position: relative;
+    width: 55%;
+    max-width: 680px;
+    height: auto;
+    border-radius: 14px;
+    object-fit: cover;
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 1s ease;
+}
+
+/* Saat muncul */
+.show {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 85%;
+        max-width: 550px;
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-image {
+        width: 95%;
+        max-width: 420px;
+    }
+}
+
+
+/* INFO SECTION */
+.info {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.info h2 {
+    color: #F5D17A;
+    font-size: 32px;
+}
+
+/* BENEFIT SECTION */
+.benefit-2-section {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.benefit-2-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #F5D17A;
+    margin-bottom: 40px;
+}
+
+.benefit-2-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.benefit-2-card {
+    padding: 30px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 18px;
+    text-align: center;
+    transition: 0.35s ease;
+}
+
+.benefit-2-card:hover {
+    transform: translateY(-5px);
+    border-color: #F5D17A;
+}
+
+.benefit-2-icon {
+    width: 85px;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    padding: 40px 20px 10px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+footer h2 {
+    color: #F5D17A;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #AAA;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    margin-top: 15px;
+    border-top: 1px solid #222;
+    padding-top: 10px;
+    color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        max-width: 80%;
+        margin-top: 30px;
+    }
+
+    .benefit-2-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* SPECIAL PROMO */
+.promo-section {
+    padding: 90px 40px;
+    text-align: center;
+}
+
+.promo-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #F5D17A;
+    margin-bottom: 10px;
+}
+
+.promo-subtitle {
+    font-size: 16px;
+    color: #CCC;
+    margin-bottom: 40px;
+}
+
+.promo-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Glassmorphism Card */
+.promo-card .promo-glass {
+    width: 290px;
+    padding: 25px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.promo-card .promo-glass:hover {
+    transform: translateY(-12px) scale(1.03) rotateX(8deg);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.15);
+}
+
+.promo-img {
+    width: 100%;
+    height: 240px;
+    /* Tinggi seragam */
+    object-fit: cover;
+    /* Crop otomatis agar gambar proporsional */
+    object-position: center;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* Promo Button */
+.promo-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #F5D17A;
+    color: #000;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 12px;
+    transition: 0.3s ease;
+}
+
+.promo-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* PARALLAX EFFECT */
+.promo-section {
+    background: url('assets/promo-bg.jpg') center/cover fixed;
+    background-attachment: fixed;
+}
+
+/* PRODUCT LIST */
+.product-list-section {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.product-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 35px;
+}
+
+.product-card {
+    background: #111;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    transition: 0.35s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    border-color: #F5D17A;
+}
+
+.product-img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* CARD HEIGHT FIX — AGAR SAMA SEMUA */
+.promo-card {
+    display: flex;
+}
+
+.promo-glass {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Agar teks tidak mendorong card menjadi lebih tinggi */
+.promo-glass h3 {
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.promo-glass p {
+    margin-bottom: auto;
+}
+
+.price {
+    color: #F5D17A;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+/* PRODUCT DETAIL */
+.product-detail {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px 40px;
+    align-items: center;
+}
+
+.detail-img {
+    width: 380px;
+    border-radius: 15px;
+}
+
+.detail-right h2 {
+    color: #F5D17A;
+    font-size: 32px;
+}
+
+.detail-price {
+    font-size: 26px;
+    color: #F5D17A;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.detail-desc {
+    color: #BBB;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+    .product-detail {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .detail-img {
+        width: 80%;
+    }
+}
+
+/* ABOUT PAGE STYLES */
+.about-hero {
+    padding: 120px 50px;
+    text-align: center;
+    background: linear-gradient(135deg, #111, #1A1A1A);
+}
+
+.about-hero h2 {
+    color: #F5D17A;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.about-hero p {
+    color: #ccc;
+    max-width: 700px;
+    margin: 20px auto;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.about-section {
+    padding: 80px 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about-section h2 {
+    color: #F5D17A;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.location-section {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.location-section h2 {
+    color: #F5D17A;
+    font-size: 32px;
+}
+
+.location-section p {
+    color: #ccc;
+    max-width: 650px;
+    margin: 15px auto;
+}
+
+.map-image {
+    width: 80%;
+    max-width: 700px;
+    border-radius: 15px;
+    margin-top: 25px;
+}
+
+.address {
+    color: #EEE;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.social-section {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.social-section h2 {
+    color: #F5D17A;
+    font-size: 32px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.social-icons img {
+    width: 48px;
+    height: 48px;
+    filter: drop-shadow(0 0 6px rgba(245, 209, 122, 0.3));
+    transition: 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.15);
+}
+
+.team-section {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.team-section h2 {
+    color: #F5D17A;
+    font-size: 32px;
+}
+
+.team-desc {
+    color: #ccc;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.team-card {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 18px;
+    padding: 25px;
+    width: 260px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    border-color: #F5D17A;
+}
+
+.team-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* PROMO BADGES */
+.promo-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 5px 10px;
+    background: #F5D17A;
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 6px;
+    z-index: 5;
+}
+
+.promo-badge.cashback {
+    background: #c8ff9c;
+    color: #000;
+}
+
+.product-card {
+    position: relative;
+}
+
+/* GRID 5 PRODUK PER BARIS */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+
+/* CARD FIXED HEIGHT UNTUK KONSISTENSI */
+.product-card {
+    position: relative;
+    background: #111;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    transition: 0.35s ease;
+    height: 420px;
+    /* Tinggi seragam */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* FIXED IMAGE SIZE */
+.product-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* NAMA PRODUK TETAP RAPIH */
+.product-card h3 {
+    min-height: 50px;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #EEE;
+}
+
+/* HARGA */
+.price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #F5D17A;
+}
+
+/* HARGA DISKON */
+.old-price {
+    color: #ff6b6b;
+    text-decoration: line-through;
+    font-size: 13px;
+}
+
+/* PROMO BADGE */
+.promo-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 5px 10px;
+    background: #F5D17A;
+    color: #000;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 6px;
+    z-index: 3;
+}
+
+.promo-badge.cashback {
+    background: #c8ff9c;
+    color: #000;
+}
+
+/* RESPONSIVE 3 PRODUK */
+@media(max-width: 1100px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* RESPONSIVE 2 PRODUK */
+@media(max-width: 700px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* RESPONSIVE 1 PRODUK */
+@media(max-width: 450px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* FORMAT HARGA PREMIUM (C2) */
+.old-price {
+    font-size: 13px;
+    color: #ff6b6b;
+    text-decoration: line-through;
+    opacity: 0.8;
+    margin-bottom: 3px;
+    display: block;
+}
+
+.price {
+    font-size: 17px;
+    font-weight: 700;
+    color: #F5D17A;
+    margin-top: 2px;
+}
+
+/* GRID 5 PRODUK */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 28px;
+}
+
+/* KONSISTENSI TAMPILAN CARD */
+.product-card {
+    position: relative;
+    background: #111;
+    padding: 18px;
+    border-radius: 16px;
+    border: 1px solid #333;
+    transition: 0.35s ease;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* GAMBAR SERAGAM */
+.product-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* NAMA PRODUK RAPIH */
+.product-card h3 {
+    min-height: 50px;
+    max-height: 50px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #EEE;
+    margin-top: 10px;
+}
+
+/* Tombol detail selalu rapi */
+.product-card .btn {
+    margin-top: auto;
+}
+
+/* SPESIFIKASI PRODUK DETAIL */
+.spec-table {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    color: #EEE;
+}
+
+.spec-table th,
+.spec-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+.spec-table th {
+    width: 35%;
+    color: #F5D17A;
+    font-weight: 600;
+}
+
+.spec-table td {
+    color: #ccc;
+}
+
+.detail-right h3 {
+    color: #F5D17A;
+    font-size: 24px;
+    margin-top: 30px;
+}

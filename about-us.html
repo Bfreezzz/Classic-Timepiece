@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Classic Timepiece</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- SCROLL ANIMATION -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const animated = document.querySelectorAll(".fade-in, .slide-up, .fade-right");
+
+            const show = () => {
+                animated.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 100) el.classList.add("show");
+                });
+            };
+
+            window.addEventListener("scroll", show);
+            show();
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="navbar">
+        <h1 class="logo-text">Classic Timepiece</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="produk.html">Produk</a>
+            <a href="about-us.html" class="active">About Us</a>
+        </nav>
+    </header>
+
+    <!-- HERO ABOUT -->
+    <section class="about-hero fade-in">
+        <h2>Tentang Classic Timepiece</h2>
+        <p>
+            Mengenal lebih dekat sejarah dan perjalanan kami dalam menghadirkan jam tangan premium
+            untuk generasi modern di seluruh Indonesia.
+        </p>
+    </section>
+
+    <!-- SEJARAH -->
+    <section class="about-section slide-up">
+        <h2>Sejarah Classic Timepiece</h2>
+
+        <p>
+            Classic Timepiece didirikan pada tahun 2025 dengan visi untuk menghadirkan jam tangan premium,
+            original, dan bergaya modern kepada seluruh pelanggan di Indonesia. Terinspirasi dari dunia horologi,
+            kami percaya bahwa jam tangan bukan hanya alat penunjuk waktu, tetapi juga bagian penting dari gaya hidup
+            dan kepercayaan diri seseorang.
+            <br><br>
+            Berawal dari toko kecil berbasis online, kami telah berkembang menjadi salah satu penyedia jam tangan
+            terpercaya dengan koleksi brand international mulai dari G-Shock, Casio Edifice, Seiko, Alexandre Christie,
+            hingga smartwatch modern seperti Garmin.
+            <br><br>
+            Dengan dedikasi penuh terhadap kualitas dan orisinalitas, Classic Timepiece terus berkembang memberikan
+            pengalaman belanja yang aman, nyaman, dan profesional.
+        </p>
+    </section>
+
+    <!-- LOKASI -->
+    <section class="location-section fade-in">
+        <h2>Lokasi & Denah Toko</h2>
+
+        <p>
+            Kamu dapat mengunjungi toko fisik kami untuk melihat langsung koleksi jam tangan premium.
+            Berikut adalah alamat dan denah lokasi Classic Timepiece.
+        </p>
+
+        <img src="assets/map.jpg" alt="Denah Lokasi Toko" class="map-image">
+
+        <p class="address">
+            Sadovnicheskaya St, 1, Moskva, Rusia, 115035
+        </p>
+    </section>
+
+    <!-- SOSIAL MEDIA -->
+    <section class="social-section slide-up">
+        <h2>Ikuti Kami di Media Sosial</h2>
+
+        <p>Dapatkan update promo terbaru, info produk, dan konten menarik lainnya.</p>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/bahlillahadalia/"><img src="assets/social/instagram.png"></a>
+            <a href="https://www.tiktok.com/@bahlil.lahadalia?lang=en"><img src="assets/social/tiktok.png"></a>
+            <a href="wa.me/6287775999393"><img src="assets/social/whatsapp.png"></a>
+            <a href="fazlemaulana1350@gmail.com"><img src="assets/social/gmail.png"></a>
+        </div>
+    </section>
+
+    <!-- TEAM FOUNDER -->
+    <section class="team-section fade-in">
+        <h2>Tim Founder Classic Timepiece</h2>
+
+        <p class="team-desc">
+            Classic Timepiece dibangun oleh tim yang berdedikasi pada dunia horologi dan retail modern.
+            Kami berkomitmen menghadirkan layanan terbaik dan produk berkualitas tinggi untuk seluruh pelanggan.
+        </p>
+
+        <div class="team-container">
+
+            <div class="team-card">
+                <img src="assets/founder1.jpg" class="team-photo">
+                <h3>Fazle Maulana Mahmud Wijaya</h3>
+                <p>Founder & CEO</p>
+            </div>
+
+            <div class="team-card">
+                <img src="assets/founder2.jpg" class="team-photo">
+                <h3>Anindya Dwi Putri Maharani</h3>
+                <p>Co-Founder & Marketing Lead</p>
+            </div>
+
+            <div class="team-card">
+                <img src="assets/founder3.jpg" class="team-photo">
+                <h3>Hilmy Afif</h3>
+                <p>Ga tau siapa</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <h2>Classic Timepiece</h2>
+            <p>Premium Watches for a New Generation.</p>
+            <p>By Bfreezzz</p>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Classic Timepiece. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- NAVBAR SHRINK SCRIPT -->
+    <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".navbar");
+            if (window.scrollY > 60) navbar.classList.add("shrink");
+            else navbar.classList.remove("shrink");
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk – Classic Timepiece</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const animated = document.querySelectorAll(".fade-in, .slide-up, .fade-right");
+            const show = () => {
+                animated.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 100) el.classList.add("show");
+                });
+            };
+            window.addEventListener("scroll", show);
+            show();
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="navbar">
+        <h1 class="logo-text">Classic Timepiece</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="produk.html">Produk</a>
+            <a href="about-us.html">About Us</a>
+        </nav>
+    </header>
+
+    <!-- PRODUCT DETAIL -->
+    <section class="product-detail fade-in" style="flex-direction: column; text-align: center;">
+
+        <!-- IMAGE ON TOP -->
+        <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 30px;">
+            <img src="assets/watch6.jpg" class="detail-img" style="width: 380px; border-radius: 15px;"
+                alt="Garmin Instinct 3 010-02934-90">
+        </div>
+
+        <!-- TEXT + SPECIFICATIONS -->
+        <div style="max-width: 900px; margin: auto; text-align: left;">
+
+            <h2 style="color: #F5D17A; font-size: 32px; margin-bottom: 10px;">
+                Garmin Instinct 3 Rugged GPS Solar Tactical Edition – 45 mm (010-02934-90)
+            </h2>
+
+            <p class="detail-price" style="font-size: 26px; margin-bottom: 15px;">
+                Rp 8.899.000
+            </p>
+
+            <p class="detail-desc" style="margin-bottom: 25px; color: #CCC; line-height: 1.7;">
+                Garmin Instinct 3 Tactical Edition menghadirkan performa luar-ruang yang sangat tangguh dengan bezel
+                logam, pengisian tenaga surya tak terbatas, dan fitur navigasi serta health-tracking mutakhir. Dirancang
+                untuk pria yang mengejar petualangan, tugas luar ruangan, atau gaya hidup aktif yang ekstrem.
+                <br><br>
+                Fitur-fitur utama: GPS multi-band dengan SatIQ™, built-in flashlight LED, mode taktis (night vision,
+                stealth), case 45 mm, tahan air 10 ATM, serta berbagai metrik kesehatan — semua dibalut desain premium
+                dan tahan banting. :contentReference[oaicite:2]{index=2}
+            </p>
+
+            <h3 style="color: #F5D17A; font-size: 26px; margin-bottom: 15px;">Spesifikasi</h3>
+
+            <table class="spec-table">
+                <tbody>
+                    <tr>
+                        <th>Model No.</th>
+                        <td>010-02934-90</td>
+                    </tr>
+                    <tr>
+                        <th>Case Size (L×W×H)</th>
+                        <td>45 × 45 × 14.9 mm</td>
+                    </tr>
+                    <tr>
+                        <th>Weight</th>
+                        <td>52 g</td>
+                    </tr>
+                    <tr>
+                        <th>Case & Bezel Material</th>
+                        <td>Fiber-reinforced Polymer / Metal-reinforced Bezel</td>
+                    </tr>
+                    <tr>
+                        <th>Band Material</th>
+                        <td>Silicone Band / Resin Band</td>
+                    </tr>
+                    <tr>
+                        <th>Glass</th>
+                        <td>Power Glass / Chemically Strengthened Glass</td>
+                    </tr>
+                    <tr>
+                        <th>Water Resistance</th>
+                        <td>100 m / 10 ATM</td>
+                    </tr>
+                    <tr>
+                        <th>Battery Life</th>
+                        <td>
+                            Up to 28 days in Smartwatch mode / Unlimited with Solar*
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>GPS & Navigation</th>
+                        <td>Multi-Band GPS with SatIQ™ Technology</td>
+                    </tr>
+                    <tr>
+                        <th>Health & Wellness</th>
+                        <td>Wrist HR, Pulse Ox, Sleep Score & Coaching, HRV Status, Daily Suggested Workouts</td>
+                    </tr>
+                    <tr>
+                        <th>Additional Features</th>
+                        <td>Built-in Flashlight LED, Tactical Modes (Jumpmaster, Dual Grid Coordinates, Stealth Mode),
+                            Garmin Pay™, Connect IQ Support</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a href="https://api.whatsapp.com/send?phone=6287775999393&text=Hallo%20kak%2C%20saya%20ingin%20membeli%20Garmin%20Instinct%203%20010-02934-90"
+                class="btn" style="margin-top: 30px;">
+                Beli Sekarang
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <h2>Classic Timepiece</h2>
+            <p>Premium Watches for a New Generation.</p>
+            <p>By Bfreezzz</p>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Classic Timepiece. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

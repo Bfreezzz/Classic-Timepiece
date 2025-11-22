@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DW-9052-2V – Classic Timepiece</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const anim = document.querySelectorAll(".fade-in, .slide-up, .fade-right");
+            const show = () => {
+                anim.forEach(el => {
+                    const r = el.getBoundingClientRect();
+                    if (r.top < window.innerHeight - 100) el.classList.add("show");
+                });
+            };
+            window.addEventListener("scroll", show); show();
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <h1 class="logo-text">Classic Timepiece</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="produk.html">Produk</a>
+            <a href="about-us.html">About Us</a>
+        </nav>
+    </header>
+
+    <!-- PRODUCT DETAIL -->
+    <section class="product-detail fade-in" style="flex-direction: column; text-align: center;">
+
+        <div style="width:100%; display:flex; justify-content:center; margin-bottom:30px;">
+            <img src="assets/watch8.jpg" class="detail-img" style="width:380px;border-radius:15px;">
+        </div>
+
+        <div style="max-width:900px; margin:auto; text-align:left;">
+
+            <h2 style="color:#F5D17A; font-size:32px;">Casio G-Shock DW-9052-2VDR Blue Resin Band</h2>
+            <p class="detail-price" style="font-size:26px;">Rp 1.129.000</p>
+
+            <p class="detail-desc">
+                Seri G-Shock DW-9052 dikenal sebagai model tangguh yang dirancang untuk penggunaan outdoor,
+                militer, dan aktivitas berat. Versi warna biru ini hadir dengan desain kokoh, tombol lampu besar,
+                dan ketahanan shock khas G-Shock.
+            </p>
+
+            <h3 style="color:#F5D17A; font-size:26px; margin:20px 0;">Spesifikasi</h3>
+
+            <table class="spec-table">
+                <tr>
+                    <th>Model No.</th>
+                    <td>DW-9052-2VDR</td>
+                </tr>
+                <tr>
+                    <th>Case Size</th>
+                    <td>48.5 × 43 × 14.7 mm</td>
+                </tr>
+                <tr>
+                    <th>Weight</th>
+                    <td>59 g</td>
+                </tr>
+                <tr>
+                    <th>Case & Bezel</th>
+                    <td>Resin</td>
+                </tr>
+                <tr>
+                    <th>Band</th>
+                    <td>Resin</td>
+                </tr>
+                <tr>
+                    <th>Glass</th>
+                    <td>Mineral Glass</td>
+                </tr>
+                <tr>
+                    <th>Water Resistance</th>
+                    <td>200 m</td>
+                </tr>
+                <tr>
+                    <th>Movement</th>
+                    <td>Quartz</td>
+                </tr>
+                <tr>
+                    <th>Functions</th>
+                    <td>Shock Resistant, Stopwatch, Countdown Timer, Multi-Alarm, EL Backlight</td>
+                </tr>
+            </table>
+
+            <a href="https://api.whatsapp.com/send?phone=6287775999393&text=Hallo%20kak,%20mau%20tanya%20stok%20DW-9052%20dong."
+                class="btn" style="margin-top:30px;">Beli Sekarang</a>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <h2>Classic Timepiece</h2>
+            <p>Premium Watches for a New Generation.</p>
+            <p>By Bfreezzz</p>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Classic Timepiece. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
